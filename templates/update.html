@@ -1,0 +1,15 @@
+{% extends "Layout.html" %}
+
+{% block body %}
+{% from "formhelpers.html" import render_field %}
+<h3>Makale Güncelle</h3>
+<hr>
+<hr>
+    <form method = "post">
+        <dl>
+            {{ render_field(form.title, class = "form-control") }}
+            {{ render_field(form.content, class = "form-control") }}
+        </dl>
+        <button type="submit" class="btn btn-danger">Güncelle</button>
+    </form>
+{% endblock body %}
